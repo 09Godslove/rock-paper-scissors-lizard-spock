@@ -335,4 +335,10 @@ lizardEL.addEventListener("click", e=>{
         }, 1500
     )
 })
-alert("click reset to sart taking score")
+let msg = 0
+let msg2 = Number (localStorage.msg)
+if (msg2 === 0){
+    alert("CLick reset to start taking score")
+    msg +=1
+    localStorage.setItem("msg", JSON.stringify(msg))
+}
