@@ -50,13 +50,9 @@ btn2.addEventListener("click", e=>{
     localStorage.setItem("score", JSON.stringify(score))
     location.reload()
 })
-if (score = isNaN){
-    score = 0
-    localStorage.setItem("score", JSON.stringify(score))
-}
-scoreEl.innerHTML = Number (scoreInLocalStorage)
-score1El.innerHTML = Number (scoreInLocalStorage)
-score = Number(scoreInLocalStorage)
+scoreEl.textContent = Number(localStorage.score)
+score1El.textContent=Number(localStorage.score)
+score =  Number(localStorage.score)
 
 
 
@@ -339,3 +335,4 @@ lizardEL.addEventListener("click", e=>{
         }, 1500
     )
 })
+alert("click reset to sart taking score")
