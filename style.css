@@ -51,45 +51,59 @@ body{
     width: 400px;
 }
 .paper,.rock,.scissors, .lizard,.spock{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
-    text-align: center;
     position: absolute;
     cursor: pointer;
-}
-
-.paper div, .rock div, .scissors div, .lizard div, .spock div{
-    padding-top: 40px;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
 }
 .paper img, .rock img, .scissors img, .lizard img, .spock img{
     width: 60px;
 }
+
 .paper{
-    background-image: radial-gradient(50% 50%,white 80%,hsl(230, 89%, 65%)10%,hsl(230, 89%, 62%) 5%);
     top: 330px;
     left: 790px;
+    background-color: hsl(230, 89%, 65%);
+    box-shadow: 0px 8px 0px hsl(230, 57%, 51%);
+}
+.paper div, .scissors div, .rock div, .spock div, .lizard div{
+    background-color: white;
+    padding: 1.5rem 1.7rem;
+    border-radius: 50%;
+    box-shadow: inset 0px 7px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
 }
 .rock{
-    background-image: radial-gradient(50% 50%,white 80%, hsl(349, 70%, 56%) 5%, hsl(349, 71%, 52%) 10%);
     top: 560px;
     left: 720px;
+    background-color: hsl(349, 70%, 56%);
+    box-shadow: 0px 8px 0px hsl(349, 71%, 52%) ;
 }
 .scissors{
-    background-image: radial-gradient(50% 50%,white 80%, hsl(39, 89%, 49%) 10% ,hsl(40, 84%, 53%) 5% );
     top: 200px;
     left: 610px;
+    background-color: hsl(40, 84%, 53%);
+    box-shadow: 0px 8px 0px hsl(39, 89%, 49%);
 }
 .lizard{
-    background-image: radial-gradient(50% 50%, white 80%,hsl(261, 73%, 60%) 10%, hsl(261, 72%, 63%)5%);
     top: 560px;
     left: 470px;
+    background-color: hsl(261, 72%, 63%);
+    box-shadow: 0px 8px 0px hsl(261, 73%, 60%);
 }
 .spock{
-    background-image: radial-gradient(50% 50%, white 80%,hsl(189, 59%, 53%)10%, hsl(189, 58%, 57%) 5%);
     top: 330px;
     left: 420px;
+    background-color: hsl(189, 58%, 57%);
+    box-shadow: 0px 8px 0px  hsl(189, 59%, 53%);
 }
 .rules{
     display: flex;
@@ -227,12 +241,29 @@ body{
         width: 30px;
     }
     .paper,.rock,.scissors, .lizard,.spock{
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
+        padding: 0.3rem 0.3rem;
+    }
+    .paper{
+        box-shadow: 0px 6px 0px hsl(230, 89%, 62%);
+    }
+    .scissors{
+        box-shadow: 0px 6px 0px hsl(39, 89%, 49%);
+    }
+    .rock{
+        box-shadow: 0px 6px 0px hsl(349, 71%, 52%);
+    }
+    .spock{
+        box-shadow: 0px 6px 0px hsl(189, 59%, 53%);
+    }
+    .lizard{
+        box-shadow: 0px 6px 0px hsl(261, 73%, 60%);
     }
     .paper div, .rock div, .scissors div, .lizard div, .spock div{
         padding-top: 20px;
         margin: auto;
+        padding: 0.6rem;
     }
     .scissors{
         top: 250px;
@@ -274,10 +305,10 @@ body{
         width: 100px;
         height: 100px;
         left: 50px;
-        
     }
     .paper2 div, .rock2 div, .scissors2 div,.spock2 div, .lizard2 div{
-        padding-top: 30px;
+        padding: 1.5rem;
+
     }
     .paper3, .rock3, .scissors3, .spock3,.lizard3{
         top: 270px;
@@ -287,7 +318,7 @@ body{
 
     }
     .paper3 div, .rock3 div, .scissors3 div,.spock3 div, .lizard3 div{
-        padding-top: 30px;
+        padding: 1.5rem;
     }
     .bottom-display{
         width: 100%;
