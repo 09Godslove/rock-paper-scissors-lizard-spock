@@ -50,10 +50,13 @@ btn2.addEventListener("click", e=>{
     localStorage.setItem("score", JSON.stringify(score))
     location.reload()
 })
+if (score = isNaN){
+    score = 0
+    localStorage.setItem("score", JSON.stringify(score))
+}
 scoreEl.innerHTML = Number (scoreInLocalStorage)
 score1El.innerHTML = Number (scoreInLocalStorage)
 score = Number(scoreInLocalStorage)
-
 
 
 
