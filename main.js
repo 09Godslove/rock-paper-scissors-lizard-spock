@@ -43,25 +43,7 @@ btn.setAttribute('class', "play-again")
 btn2.setAttribute('class', "reset")
 let house = Math.floor(Math.random() * 5)
 btn.addEventListener("click", e=>{
-    step1El.style.zIndex = '1'
-    step2El.style.zIndex = '0'
-    paper2EL.style.zIndex = '0'
-    paper3EL.style.zIndex = '0'
-    rock3EL.style.zIndex = '0'
-    scissors2EL.style.zIndex = '0'
-    scissors3EL.style.zIndex = '0'
-    paper3EL.style.opacity = '0'
-    rock3EL.style.opacity = '0'
-    scissors3EL.style.zIndex = '0'
-    lizard2EL.style.zIndex = '0'
-    spock2EL.style.zIndex = '0'
-    spock3EL.style.zIndex = '0'
-    spock3EL.style.opacity = '0'
-    lizard3EL.style.zIndex = '0'
-    lizard3EL.style.opacity = '0'
-    circleAnimation.style.display = "none"
-    circleAnimation2.style.display = "none"
-    scoreEl.innerHTML = localStorage.score
+    location.reload()
 
 })
 btn2.addEventListener("click", e=>{
