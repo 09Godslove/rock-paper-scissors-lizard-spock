@@ -44,7 +44,6 @@ btn2.setAttribute('class', "reset")
 let house = Math.floor(Math.random() * 5)
 btn.addEventListener("click", e=>{
     location.reload()
-
 })
 btn2.addEventListener("click", e=>{
     score = 0
