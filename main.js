@@ -43,17 +43,40 @@ btn.setAttribute('class', "play-again")
 btn2.setAttribute('class', "reset")
 let house = Math.floor(Math.random() * 5)
 btn.addEventListener("click", e=>{
-    location.reload()
+    step1El.style.zIndex = '1'
+    step2El.style.zIndex = '0'
+    paper2EL.style.zIndex = '0'
+    paper3EL.style.zIndex = '0'
+    rock3EL.style.zIndex = '0'
+    scissors2EL.style.zIndex = '0'
+    scissors3EL.style.zIndex = '0'
+    paper3EL.style.opacity = '0'
+    rock3EL.style.opacity = '0'
+    scissors3EL.style.zIndex = '0'
+    lizard2EL.style.zIndex = '0'
+    spock2EL.style.zIndex = '0'
+    spock3EL.style.zIndex = '0'
+    spock3EL.style.opacity = '0'
+    lizard3EL.style.zIndex = '0'
+    lizard3EL.style.opacity = '0'
+    circleAnimation.style.display = "none"
+    circleAnimation2.style.display = "none"
+    scoreEl.innerHTML = localStorage.score
+
 })
 btn2.addEventListener("click", e=>{
     score = 0
     localStorage.setItem("score", JSON.stringify(score))
     location.reload()
 })
-scoreEl.textContent = Number(localStorage.score)
-score1El.textContent=Number(localStorage.score)
-score =  Number(localStorage.score)
-
+function startScore (){
+    score = 0
+    localStorage.setItem("score", JSON.stringify(score))
+    location.reload()
+}
+scoreEl.innerHTML = localStorage.score
+score1El.innerHTML = localStorage.score
+score = Number(localStorage.score)
 
 
 rulesEl.addEventListener("click", e=>{
@@ -335,10 +358,3 @@ lizardEL.addEventListener("click", e=>{
         }, 1500
     )
 })
-let msg = 0
-let msg2 = Number (localStorage.msg)
-if (msg2 === 0){
-    alert("CLick reset to start taking score")
-    msg +=1
-    localStorage.setItem("msg", JSON.stringify(msg))
-}

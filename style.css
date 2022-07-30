@@ -357,3 +357,12 @@ body{
 
     }
 }
+.keep-score{
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    background-color: white;
+    color:hsl(214, 47%, 50%) ;
+    border-radius: 5px;
+    padding: 5px;
+}
